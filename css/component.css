@@ -1,0 +1,100 @@
+/*
+    Single-line snackbar height: 48dp
+    Multi-line snackbar height: 80dp
+    Text: Roboto Regular 14sp
+    Action button: Roboto Medium 14sp, all-caps text
+    Default background fill: #323232 100%
+*/
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src:url('../font/Roboto-Regular.ttf');
+}
+
+.snackbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0px 9px rgba(0,0,0,.3);
+    font-family: 'Roboto-Regular', Arial, sans-serif;
+    padding: 14px 23px;
+    background: #323232;
+    color: white;
+    font-size: 14px;
+    transform: translateY(100%);
+}
+
+.snackbar.show{
+    animation: show 400ms cubic-bezier(0.4, 0.0, 0.2, 1) both;
+}
+
+.snackbar.hide{
+    animation: hide 300ms cubic-bezier(0.4, 0.0, 0.2, 1) both;
+}
+
+@-webkit-keyframes show {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@-o-keyframes show {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@-moz-keyframes show {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@keyframes show {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes hide {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+@-o-keyframes hide {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+@-moz-keyframes hide {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+@keyframes hide {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
