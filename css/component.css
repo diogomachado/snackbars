@@ -14,15 +14,29 @@
 .snackbar{
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0px 9px rgba(0,0,0,.3);
     font-family: 'Roboto-Regular', Arial, sans-serif;
     padding: 14px 23px;
     background: #323232;
     color: white;
-    font-size: 14px;
+    font-size: 12.5px;
+    width: 288px;
+    left: 50%;
+    margin-left: calc(-288px/2);
+    align-items: center;
+    display: flex;
     transform: translateY(100%);
+}
+
+.snackbar .snackbar-md{
+    width: 360px;
+    left: 50%;
+    margin-left: calc(-360px/2);
+}
+
+.snackbar p{
+    display: inline-block;
+    width: 73%;
+    margin: 0;
 }
 
 .snackbar.show{
@@ -31,6 +45,26 @@
 
 .snackbar.hide{
     animation: hide 300ms cubic-bezier(0.4, 0.0, 0.2, 1) both;
+}
+
+.snackbar button{
+    background: none;
+    border: 0;
+    float: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FFEB3B;
+    padding: 0 0 0 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+.snackbar button.primary{
+    color: #4CAF50;
+}
+
+.snackbar button.danger{
+    color: #F44336;
 }
 
 @-webkit-keyframes show {
@@ -96,5 +130,13 @@
     }
     to {
         transform: translateY(100%);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .snackbar{
+        width: 100%;
+        left: auto;
+        margin-left: auto;
     }
 }
