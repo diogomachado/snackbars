@@ -18,19 +18,27 @@
     padding: 14px 23px;
     background: #323232;
     color: white;
-    font-size: 12.5px;
+    font-size: 14px;
     width: 288px;
     left: 50%;
     margin-left: calc(-288px/2);
     align-items: center;
     display: flex;
     transform: translateY(100%);
+    border-radius: 2px 2px 0 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.28);
 }
 
-.snackbar .snackbar-md{
+.snackbar.snackbar-md{
     width: 360px;
     left: 50%;
     margin-left: calc(-360px/2);
+}
+
+.snackbar.snackbar-lg{
+    width: 558px;
+    left: 50%;
+    margin-left: calc(-558px/2);
 }
 
 .snackbar p{
@@ -48,13 +56,13 @@
 }
 
 .snackbar button{
+    position: absolute;
+    right: 24px;
     background: none;
     border: 0;
-    float: right;
     text-transform: uppercase;
     font-weight: bold;
     color: #FFEB3B;
-    padding: 0 0 0 24px;
     outline: none;
     cursor: pointer;
 }
@@ -134,9 +142,12 @@
 }
 
 @media screen and (max-width: 480px){
-    .snackbar{
+    .snackbar, 
+    .snackbar.snackbar-lg,
+    .snackbar.snackbar-md{
         width: 100%;
         left: auto;
         margin-left: auto;
+        border-radius: 0;
     }
 }

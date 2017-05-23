@@ -7,14 +7,70 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/component.css">
+    
 </head>
 <body>
     <h1>Snackbars</h1>
+    <p>Hi, I'm snackbar component, click for test</p>
+
+    <h3>Show simple</h3>
+    <button type="button" onclick="showDemo(1)">Demo</button>
+
+    <h3>Show with time</h3>
+    <button type="button" onclick="showDemo(2)">Demo</button>
+
+    <h3>Show with time and button</h3>
+    <button type="button" onclick="showDemo(3)">Demo</button>
+
+    <h3>Big text</h3>
+    <button type="button" onclick="showDemo(4)">Demo</button>
 
     <div class="snackbar">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, magnam!</p>
+        <p></p>
     </div>
 
     <script src="snackbar.js"></script>
+    <script>
+
+        // This code is only test
+        function showDemo(key){
+            switch (key) {
+                case 1:
+                    snackbar.timer("Hello World", 3000);                    
+                break;
+
+                case 2:
+                    snackbar.timer("Hello World with 5 secunds", 5000);                    
+                break;
+
+                case 3:
+
+                    // Create new button
+                    var button = {};
+                    button.id = "btn_cancel";
+                    button.title = "Cancel";
+
+                    // Set function callback
+                    snackbar.setCallback(test);
+
+                    // Call
+                    snackbar.timer("Hello World", 3000, button);
+                break;
+            
+                case 4:
+                    snackbar.timer("Hello World with big text lorem ipsum and survive", 5000);                    
+                break;
+
+                default:
+                break;
+            }
+
+        }
+
+        // Example function callback
+        function test(){
+            alert("Ok, execute a function");
+        }
+    </script>
 </body>
 </html>
