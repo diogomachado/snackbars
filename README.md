@@ -21,7 +21,16 @@ snackbar.timer("Hello", 3000);
 ```
 
 ## Message with button:
+
+![](https://lh3.googleusercontent.com/X3ruww9csecZZj9ABAIv0p3ezTQrBVi_jTbah4IDXp1mnRVmA5l06B0dYangSRuaoT575hSOfgqUGRrfWwok9DZ8E58lq3E67KDZG5tRWNZqmPTBiGtXYKFNsxm6d4ZDStkERiGQaKEjEwX-cWnP1rh6yQrkDZ2T_kYGHtvHEPP3vajtbOiqN-imuA-i1yAkFm5TdPWqGPsVS8u-PVMJ9q4AvJUXR3J0EhKRsGDDKBv3Grp44Uh9Ng_W7jOt4_lxKD9_gKd_NxrPIlTHqK3ScGe6Tps9l3-cODGvdnX-UE5asR_h_ZQ5_TWeBQ5SJecxrRAr45VV59uL6cinLqaURAhtf8QF23XjJTbD9SrwesHAaRlz6PS2jG_T0-RqbNZQmmSbidQhtaf3Oskr64622mtLkTeAng6NUh_4T0BWE2wdR7C3ZXVhCR2rfmksSHANqebr8z4pKrgZToQyz6tc2Itv5yD01g7-qVpLkeoYptG5jTDnvXUwKEx8NNfEV93AyrvvqOU6Cy-0p6UPHBzNdVHUULc1P83Bj0dNFjkTAx6agcq5A3YyYw95JHnhO9l6GU7OkrjR=w1547-h810)
+
 ``` js
+
+// Function example callback
+function test(){
+  console.info("Cancel button touch!");
+}
+
 // Create new button
 var button = {};
 button.id = "btn_cancel";

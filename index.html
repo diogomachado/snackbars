@@ -10,20 +10,12 @@
     
 </head>
 <body>
-    <h1>Snackbars</h1>
-    <p>Hi, I'm snackbar component, click for test</p>
-
-    <h3>Show simple</h3>
-    <button type="button" onclick="showDemo(1)">Demo</button>
-
-    <h3>Show with time</h3>
-    <button type="button" onclick="showDemo(2)">Demo</button>
-
-    <h3>Show with time and button</h3>
-    <button type="button" onclick="showDemo(3)">Demo</button>
-
-    <h3>Big text</h3>
-    <button type="button" onclick="showDemo(4)">Demo</button>
+    
+    <button type="button" onclick="showDemo(1)">Show</button>
+    <button type="button" onclick="showDemo(2)">Hide</button>
+    <button type="button" onclick="showDemo(3)">Show with time</button>
+    <button type="button" onclick="showDemo(4)">Show with time and button</button>
+    <button type="button" onclick="showDemo(5)">Big text</button>
 
     <div class="snackbar">
         <p></p>
@@ -36,14 +28,18 @@
         function showDemo(key){
             switch (key) {
                 case 1:
-                    snackbar.timer("Hello World", 3000);                    
+                    snackbar.show("Hello World");
                 break;
 
                 case 2:
-                    snackbar.timer("Hello World with 5 secunds", 5000);                    
+                    snackbar.hide();
                 break;
 
                 case 3:
+                    snackbar.timer("Hello World with 5 seconds", 5000);                    
+                break;
+
+                case 4:
 
                     // Create new button
                     var button = {};
@@ -54,10 +50,10 @@
                     snackbar.setCallback(test);
 
                     // Call
-                    snackbar.timer("Hello World", 3000, button);
+                    snackbar.timer("Hello World", 12000, button);
                 break;
             
-                case 4:
+                case 5:
                     snackbar.timer("Hello World with big text lorem ipsum and survive", 5000);                    
                 break;
 
