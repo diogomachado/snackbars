@@ -39,15 +39,18 @@ var snackbar = (function(){
 
     obj.hide = function(time){
 
-        var div = document.getElementsByClassName('snackbar');
-        var text = document.querySelector('.snackbar p');
-        div[0].className += " hide";
+        var div = document.querySelector('.snackbar.show');
 
-        setTimeout(function(){
-            div[0].className = "snackbar";
-            text.innerHTML = "";
-            div[0].innerHTML = "<p></p>";
-        }, 300);
+        if (div){
+            var text = document.querySelector('.snackbar p');
+            div.className += " hide";
+
+            setTimeout(function(){
+                div.className = "snackbar";
+                text.innerHTML = "";
+                div.innerHTML = "<p></p>";
+            }, 300);
+        }
     };
 
     obj.timer = function(message, miliseconds, button){
