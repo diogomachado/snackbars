@@ -9,32 +9,37 @@ var snackbar = (function(){
 
     obj.show = function(message, button){
 
-        var div = document.getElementsByClassName('snackbar');
-        var text = document.querySelector('.snackbar p');
+        var check = document.querySelector('.snackbar.show');
 
-        // If you have a button set
-        if (button){
-            var buttonNew = document.createElement('button');
+        if (!check){
 
-            // Button properties
-            buttonNew.id = button.id;
-            buttonNew.innerText = button.title;
-            buttonNew.addEventListener('click', obj.callback);
+            var div = document.getElementsByClassName('snackbar');
+            var text = document.querySelector('.snackbar p');
 
-            div[0].appendChild(buttonNew);
-        }
+            // If you have a button set
+            if (button){
+                var buttonNew = document.createElement('button');
 
-        // Places a size class according to the size of the string
-        if (message.length > 28){
-            if (message.length <= 35){
-                div[0].className += " snackbar-md";
-            }else{
-                div[0].className += " snackbar-lg";
+                // Button properties
+                buttonNew.id = button.id;
+                buttonNew.innerText = button.title;
+                buttonNew.addEventListener('click', obj.callback);
+
+                div[0].appendChild(buttonNew);
             }
-        }
 
-        div[0].className += " show";
-        text.innerHTML = message;
+            // Places a size class according to the size of the string
+            if (message.length > 28){
+                if (message.length <= 35){
+                    div[0].className += " snackbar-md";
+                }else{
+                    div[0].className += " snackbar-lg";
+                }
+            }
+
+            div[0].className += " show";
+            text.innerHTML = message;
+        }
     };
 
     obj.hide = function(time){
