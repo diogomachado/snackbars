@@ -6,15 +6,10 @@
     Default background fill: #323232 100%
 */
 
-@font-face {
-    font-family: 'Roboto-Regular';
-    src:url('../font/Roboto-Regular.ttf');
-}
-
 .snackbar{
     position: fixed;
     bottom: 0;
-    font-family: 'Roboto-Regular', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     padding: 14px 23px;
     background: #323232;
     color: white;

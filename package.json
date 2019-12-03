@@ -1,0 +1,23 @@
+{
+  "name": "@diogomachado/snackbars",
+  "version": "1.0.0",
+  "description": "Component vanilla JS for simple snackbar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogomachado/snackbars.git"
+  },
+  "keywords": [
+    "snackbar"
+  ],
+  "author": "Diogo Souza Machado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diogomachado/snackbars/issues"
+  },
+  "homepage": "https://github.com/diogomachado/snackbars#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+}
